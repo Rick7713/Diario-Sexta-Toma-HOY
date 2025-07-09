@@ -1,61 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>6TA TOMA Noticias</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6ta Toma Noticias - Edición Física</title>
+
+  <!-- Tipos de letra -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --cian: #00bcd4;
+      --celeste: #e0f7fa;
+      --texto: #012d35;
+    }
+
     body {
       margin: 0;
-      font-family: 'Anton', sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--celeste);
+      color: var(--texto);
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     header {
-      background-color: #111;
+      background: linear-gradient(90deg, var(--cian), #008ba3);
       color: white;
-      padding: 20px;
+      padding: 2rem 1rem;
       width: 100%;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #e0f7fa;
+      margin-top: 8px;
+      font-weight: 500;
     }
 
     main {
-      padding: 20px;
+      padding: 2rem 1rem;
       width: 100%;
-      max-width: 960px;
+      max-width: 980px;
     }
 
     iframe {
       width: 100%;
-      height: 90vh;
-      border: none;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      height: 88vh;
+      border: 2px solid var(--cian);
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(0, 188, 212, 0.15);
+      background-color: white;
     }
 
     footer {
-      padding: 10px;
-      color: #555;
-      font-size: 0.9em;
+      margin-top: 2rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #066;
       text-align: center;
+      border-top: 2px solid var(--cian);
+      width: 100%;
+      background-color: #f0fdff;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      iframe {
+        height: 75vh;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>6ta Toma Noticias</h1>
-    <p>Edición física</p>
+    <p>Edición física - Julio 2025</p>
   </header>
 
   <main>
-    <iframe src="SEXTA_TOMA_NOTICIAS_DIARIO.pdf"></iframe>
+    <iframe src="SEXTA_TOMA_NOTICIAS_DIARIO.pdf" title="Edición física PDF"></iframe>
   </main>
 
   <footer>
-    &copy; 2025 Sexta Toma | Todos los derechos reservados
+    &copy; 2025 Sexta Toma. Todos los derechos reservados.
   </footer>
 </body>
 </html>
